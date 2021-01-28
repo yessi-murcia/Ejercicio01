@@ -5,26 +5,26 @@
 
 TABLA DE CONTENIDO
 ==================
-- [OBJETIVO](#objetivo)
-- [LEER TODOS LOS ARCHIVOS DE LA CARPETA](#leer-archivos)
-- [CALCULAR LAS OBSERVACIONES USANDO EL PROGRAMA TEQC](#teqc)
-- [EXTRAER COORDENADAS DE OBSERVACIONES](#extraer-coord)
-- [CONVERTIR COORDENADAS GEOCENTRICAS A GEODESICAS](#convertir-coord)
-- [PARA ENTREGAR](#para-entregar)
+- [Objetivo](#objetivo)
+- [Leer todos los archivos de la carpeta](#leer-archivos)
+- [Calcular las observaciones usando el programa teqc](#teqc)
+- [Extraer coordenadas de Observaciones](#extraer-coord)
+- [Convertir Coordenadas Geocentricas a Geodesicas](#convertir-coord)
+- [Para Entregar](#para-entregar)
 
 Cada alumno desarrollará un código que sea capaz de mostrar la coordenada promedio de una estación GPS a partir de las observaciones diarias. Deberá copiar el repositorio base de la actividad y luego subir su trabajo en su propio repositorio en Github.
 
-OBJETIVO
-------------
+Objetivo
+---------
 Utilizar Python para leer archivos y calcular la coordenada promedio en base a las observaciones diarias de una estación GPS de monitoreo continuo.
 Para el desarrollo de la actividad, el código deberá ser capaz de realizar las siguientes funciones:
 
-LEER TODOS LOS ARCHIVOS DE LA CARPETA
-----------------------------------------
+Leer todos los archivos de la carpeta
+---------------------------------------
 Deberá crear una función que permita listar todos los archivos dentro de su carpeta de trabajo, filtrar los archivos correspondientes a las observaciones GPS (.AS) y agregar todos los archivos a una misma lista (AS_files)
 	
-CALCULAR LAS OBSERVACIONES USANDO EL PROGRAMA TEQC
----------------------------------
+Calcular las observaciones usando el programa teqc
+--------------------------------------------------
 Teqc (pronunciado "tek") es un enfoque simple pero poderoso y unificado para resolver muchos problemas de preprocesamiento con datos de GPS, GLONASS, Galileo, SBAS, Beidou, QZSS e IRNSS, especialmente en formato RINEX o BINEX, Es un software libre desarrollado por UNAVCO.
 Para utilizar el programa necesitará ejecutar el siguiente comando desde la línea de comando (cmd):
 
@@ -37,16 +37,16 @@ donde:
 
 Para llamar teqc desde una terminal de Windows le será útil explorar la función os.system().
 
-EXTRAER COORDENADAS DE OBSERVACIONES
-----------------------------
+Extraer coordenadas de Observaciones
+------------------------------------
 Extraer del archivo la información que indica la posición de la antena en coordenadas geocéntricas (X.Y,Z).
 Esta función deberá ser capaz nuevamente de listar cada archivo de observación “.o” que exista dentro del directorio de trabajo, leer el archivo y extraer los valores de las coordenadas.
 También deberá agregar cada valor de cada coordenada (x,y,z) a una lista respectiva que contenga cada componente (X_list, Y_list, Z_list)
 
 En el scope global de su código, le será útil calcular el valor promedio de cada uno de los componentes (X_mean, Y_mean, Z_mean), a partir de los valores almacenados en las listas respectivas.
 
-CONVERTIR COORDENADAS GEOCENTRICAS A GEODESICAS
---------------------------
+Convertir Coordenadas Geocentricas a Geodesicas
+-----------------------------------------------
 Para realizar los cálculos le serán conveniente los siguientes consejos:
 - Importa el módulo math para realizar los cálculos de seno (sin), coseno (cos), arcotangente (atan), raíz cuadrada (sqrt), potencia (pow). Por defecto todos los ángulos calculados en Python están expresados en radianes, por lo cual, para mostrar las coordenadas finales (φ, λ) deberás convertirlas a grados decimales (degrees)
 - Utilizando las fórmulas planteadas anteriormente:
@@ -63,7 +63,7 @@ Para realizar los cálculos le serán conveniente los siguientes consejos:
 
 Una vez realizado la conversión de las coordenadas, deberá mostrarle al usuario las coordenadas finales.
 
-PARA ENTREGAR
+Para Entregar
 ----------------
 Deberá agregar en el foro que se abrirá en el campus virtual, el enlace a su repositorio en Github, que contenga, además de los archivos originales proporcionados.
 1. El código desarrollado en Python.
