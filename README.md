@@ -5,25 +5,25 @@
 
 TABLA DE CONTENIDO
 ==================
-- [1. Objetivo](#objetivo)
-- [1. Leer todos los archivos de la carpeta](#leer-archivos)
-- [1. Calcular las observaciones usando el programa teqc](#teqc)
-- [1. Extraer coordenadas de Observaciones](#extraer-coord)
-- [1. Convertir coordenadas geocéntricas (X, Y, Z) a Geodésicas (φ, λ, h)](#convertir_coord)
-- [1. PARA ENTREGAR](#para-entregar)
+- [Objetivo](#objetivo)
+- [Leer todos los archivos de la carpeta](#leer-archivos)
+- [Calcular las observaciones usando el programa teqc](#teqc)
+- [Extraer coordenadas de Observaciones](#extraer-coord)
+- [Convertir coordenadas geocéntricas (X, Y, Z) a Geodésicas (φ, λ, h)](#convertir_coord)
+- [PARA ENTREGAR](#para-entregar)
 
 Cada alumno desarrollará un código que sea capaz de mostrar la coordenada promedio de una estación GPS a partir de las observaciones diarias. Deberá copiar el repositorio base de la actividad y luego subir su trabajo en su propio repositorio en Github.
 
-1. Objetivo
+Objetivo
 ------------
 Utilizar Python para leer archivos y calcular la coordenada promedio en base a las observaciones diarias de una estación GPS de monitoreo continuo.
 Para el desarrollo de la actividad, el código deberá ser capaz de realizar las siguientes funciones:
 
-1. Leer todos los archivos de la carpeta
+Leer todos los archivos de la carpeta
 ----------------------------------------
    Deberá crear una función que permita listar todos los archivos dentro de su carpeta de trabajo, filtrar los archivos correspondientes a las observaciones GPS (.AS) y agregar todos los archivos a una misma lista (AS_files)
 	
-1. Calcular las observaciones usando el programa teqc
+Calcular las observaciones usando el programa teqc
 ---------------------------------
    Teqc (pronunciado "tek") es un enfoque simple pero poderoso y unificado para resolver muchos problemas de preprocesamiento con datos de GPS, GLONASS, Galileo, SBAS, Beidou, QZSS e IRNSS, especialmente en formato RINEX o BINEX, Es un software libre desarrollado por UNAVCO.
    Para utilizar el programa necesitará ejecutar el siguiente comando desde la línea de comando (cmd):
@@ -35,7 +35,7 @@ Para el desarrollo de la actividad, el código deberá ser capaz de realizar las
 
 Para llamar teqc desde una terminal de Windows le será útil explorar la función os.system().
 
-1. Extraer coordenadas de Observaciones
+Extraer coordenadas de Observaciones
 ----------------------------
    Extraer del archivo la información que indica la posición de la antena en coordenadas geocéntricas (X.Y,Z).
    Esta función deberá ser capaz nuevamente de listar cada archivo de observación “.o” que exista dentro del directorio de trabajo, leer el archivo y extraer los valores de las coordenadas.
@@ -43,7 +43,7 @@ Para llamar teqc desde una terminal de Windows le será útil explorar la funci�
 
 En el scope global de su código, le será útil calcular el valor promedio de cada uno de los componentes (X_mean, Y_mean, Z_mean), a partir de los valores almacenados en las listas respectivas.
 
-1. Convertir coordenadas geocéntricas (X, Y, Z) a Geodésicas (φ, λ, h)
+Convertir coordenadas geocéntricas (X, Y, Z) a Geodésicas (φ, λ, h)
 --------------------------
    Para realizar los cálculos le serán conveniente los siguientes consejos:
 	* Importa el módulo math para realizar los cálculos de seno (sin), coseno (cos), arcotangente (atan), raíz cuadrada (sqrt), potencia (pow). Por defecto todos los ángulos calculados en Python están expresados en radianes, por lo cual, para mostrar las coordenadas finales (φ, λ) deberás convertirlas a grados decimales (degrees)
@@ -61,7 +61,7 @@ En el scope global de su código, le será útil calcular el valor promedio de c
 
 Una vez realizado la conversión de las coordenadas, deberá mostrarle al usuario las coordenadas finales.
 
-1. PARA ENTREGAR
+PARA ENTREGAR
 ----------------
    Deberá agregar en el foro que se abrirá en el campus virtual, el enlace a su repositorio en Github, que contenga, además de los archivos originales proporcionados:
 	1. El código desarrollado en Python.
